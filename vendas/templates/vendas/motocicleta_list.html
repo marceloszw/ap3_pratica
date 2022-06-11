@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Lista de Motocicletas</h2>
+    <ul>
+        {% for motocicleta in object_list %}
+            <li><b>Marca:</b> {{ motocicleta.marca }}<br/>
+                <b>Modelo:</b> {{ motocicleta.modelo }}<br/>
+                <b>Placa:</b> {{ motocicleta.placa }}<br/>
+                <b>Cor:</b> {{ motocicleta.cor }}<br />
+                <b>Ano:</b> {{ motocicleta.ano }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

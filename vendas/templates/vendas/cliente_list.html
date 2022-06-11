@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Clientes</h2>
+    <ul>
+        {% for cliente in object_list %}
+            <li>
+                <b>Nome: </b>{{ cliente.nome_completo }}<br/>
+                <b>Email: </b>{{ cliente.email }}<br/>
+                <b>Telefone: </b>{{ cliente.telefone }}<br/>
+                <b>Endereço: </b>{{ cliente.endereco }}<br/>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

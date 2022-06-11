@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Lista de Venda</h2>
+    <ul>
+        {% for venda in object_list %}
+            <li><b>Nome do Cliente:</b> {{ venda.cliente.nome_completo }}
+                <br/>
+                <b>Motocicleta adquirida:</b> {{ venda.motocicleta.marca }} {{ venda.motocicleta.modelo }} {{ venda.motocicleta.cor }} {{ venda.motocicleta.placa }}
+                <a href='/vendas/{{ venda.id }}'>Consultar detalhes</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

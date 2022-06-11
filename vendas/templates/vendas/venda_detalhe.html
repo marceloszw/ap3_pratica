@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Consulta Detalhes</h2>
+    <ul>
+        
+        <li><b>Id da Venda:</b> {{ venda.id }} <br/>
+            <b>Nome do Cliente:</b> {{ venda.cliente.nome_completo }}
+            <br/>
+            <b>Email do Cliente:</b> {{ venda.cliente.email }}
+            <br/>
+            <b>Telefone do Cliente:</b> {{ venda.cliente.telefone }}
+            <br/>
+            <b>Motocicleta adquirida:</b> {{ venda.motocicleta.marca }} {{ venda.motocicleta.modelo }} {{ venda.motocicleta.cor }}
+            <br/>
+            <b>Placa:</b> {{ venda.motocicleta.placa }}
+            <br/>
+            <b>Ano:</b> {{ venda.motocicleta.ano }}
+            <br/>
+            <b>Data da compra:</b> {{ venda.data_compra }}
+        </li>
+        
+    </ul>
+{% endblock %}
